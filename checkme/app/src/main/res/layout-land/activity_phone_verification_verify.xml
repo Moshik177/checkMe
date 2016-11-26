@@ -1,0 +1,122 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/holo_purple_light"
+    tools:context="com.sadna.app.checkme.activities.PhoneVerificationSendActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="@color/holo_pink_light"
+        android:minHeight="?attr/actionBarSize"
+        android:weightSum="1">
+
+    <ImageView
+        android:layout_width="55dp"
+        android:contentDescription="logo_image"
+        android:layout_height="55dp"
+        android:src="@drawable/check_me_logo"
+        android:layout_gravity="left|center"
+        android:layout_weight="0.01"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbarText"
+        android:textColor="@color/holo_purple_dark"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:text="@string/phone_verification_toolbar"
+        android:layout_marginTop="20dp" />
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="top|center_horizontal"
+            android:text="@string/phone_verification_subtitle"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/holo_purple_dark"
+            android:textSize="@dimen/abc_text_size_medium_material"
+            android:textStyle="bold"
+            android:typeface="sans"
+            android:layout_marginTop="30dp" />
+
+        <TextView
+            android:id="@+id/body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="top|center_horizontal"
+            android:gravity="center"
+            android:singleLine="false"
+            android:text="@string/phone_verification_verify_body"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/holo_purple_dark"
+            android:textSize="@dimen/abc_text_size_medium_material"
+            android:typeface="sans"
+            android:layout_marginTop="30dp" />
+
+        <EditText
+            android:id="@+id/verify_code_textbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:ems="10"
+            android:inputType="number"
+            android:phoneNumber="false"
+            android:maxLength="5"
+            android:layout_marginTop="30dp" />
+
+        <Button
+            android:id="@+id/verify_button"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentTop="false"
+            android:layout_alignWithParentIfMissing="false"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/holo_purple_new"
+            android:textColor="@color/holo_white"
+            android:clickable="true"
+            android:enabled="true"
+            android:text="@string/verify"
+            android:onClick="verifyPhone"
+            android:layout_marginTop="20dp"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/error_verify_wrong_code"
+            android:id="@+id/textErrorViewVerify"
+            android:visibility="invisible"
+            android:textColor="@color/holo_red_light"
+            android:textStyle="bold"
+            android:layout_marginLeft="45dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

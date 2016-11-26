@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background_img"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/holo_purple_light"
+    android:touchscreenBlocksFocus="true"
+    tools:context="com.sadna.app.checkme.activities.ManageUsersActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="@color/holo_pink_light"
+        android:minHeight="?attr/actionBarSize"
+        android:weightSum="1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:layout_width="55dp"
+            android:contentDescription="logo_image"
+            android:layout_height="55dp"
+            android:src="@drawable/check_me_logo"
+            android:layout_gravity="left|center"
+            android:layout_weight="0.01"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbarText"
+            android:textColor="@color/holo_purple_dark"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:text="@string/title_manage_users"
+            android:layout_marginTop="15dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp" />
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <Button
+        android:id="@+id/add_users_button"
+        style="@style/Base.Widget.AppCompat.Button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:elegantTextHeight="false"
+        android:onClick="addUsers"
+        android:text="@string/addUsersButton"
+        android:background="@drawable/buttom_line"
+        android:textColor="@color/holo_white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="230dp" />
+
+    <Button
+        android:id="@+id/remove_users_button"
+        style="@style/Base.Widget.AppCompat.Button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:elegantTextHeight="false"
+        android:text="@string/removeUsersButton"
+        android:background="@color/holo_purple_new"
+        android:textColor="@color/holo_white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_below="@+id/add_users_button"
+        android:layout_alignParentStart="true"
+        android:onClick="removeUsers" />
+
+</RelativeLayout>

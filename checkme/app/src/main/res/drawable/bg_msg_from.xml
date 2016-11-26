@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item><layer-list>
+        <item><shape>
+            <gradient android:angle="90" android:endColor="@color/holo_white" android:startColor="@color/holo_white" android:type="linear" />
+
+            <stroke android:width="2dp" android:color="@color/holo_purple_new" />
+
+            <corners android:radius="3dp" />
+
+            <padding android:bottom="3dp" android:left="3dp" android:right="3dp" android:top="3dp" />
+        </shape></item>
+    </layer-list></item>
+
+</selector>

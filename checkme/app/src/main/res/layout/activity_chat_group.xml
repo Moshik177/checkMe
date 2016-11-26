@@ -1,0 +1,106 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/holo_purple_light"
+    android:orientation="vertical" >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="@color/holo_pink_light"
+        android:minHeight="?attr/actionBarSize"
+        android:weightSum="1">
+		  
+		  <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_alignParentStart="true">
+			
+      <ImageView
+            android:id = "@+id/logo"
+            android:layout_width="55dp"
+            android:contentDescription="logo_image"
+            android:layout_height="55dp"
+            android:src="@drawable/check_me_logo"
+            android:layout_gravity="left|center"
+            android:layout_marginTop="10dp"
+            tools:ignore="RtlHardcoded"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/toolbarText"
+                android:textColor="@color/holo_purple_dark"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                 android:text="@string/title_chat"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:layout_gravity = "right|center"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/logo"
+                tools:ignore="RtlHardcoded" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:id="@+id/groupNameTitle"
+        android:background="@color/holo_purple_new"
+        android:textColor="@color/holo_white"
+        android:layout_gravity="left|center"
+        android:gravity="center" />
+
+    <ListView
+        android:id="@+id/list_view_messages"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.87"
+        android:background="@null"
+        android:divider="@null"
+        android:transcriptMode="alwaysScroll"
+        android:stackFromBottom="true">
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/llMsgCompose"
+        android:background="@color/holo_purple_light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+
+        <ImageView
+            android:layout_width="55dp"
+            android:id="@+id/btnSend"
+            android:onClick="onButtonSendClick"
+            android:clickable="true"
+            android:contentDescription="logo_image"
+            android:layout_height="55dp"
+            android:src="@drawable/send"
+            android:layout_gravity="left|center"
+            android:layout_weight="0.01" />
+
+
+        <EditText
+            android:id="@+id/inputMsg"
+            android:background="@drawable/bg_msg_from"
+            android:layout_width="300dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="2"
+            android:clickable="true"
+            android:onClick="setListenerToRootView"
+            android:textColor="@color/text_msg_input"
+            android:paddingStart="6dp"
+            android:paddingEnd="6dp"
+            android:gravity="right|center_vertical" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,22 @@
+<resources>
+    <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+
+https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=20:62:2D:76:27:3E:EC:F4:A3:E4:9B:99:03:EF:E0:02:FD:7C:52:82%3Bcom.sadna.app.checkme
+
+    You can also add your credentials to an existing key, using this line:
+    2C:17:19:1A:98:5D:CE:7E:B8:94:C6:A4:60:4C:8F:D3:6E:DE:A4:27;com.sadna.app.checkme
+    /AIzaSyCG0WDMrkNDHHee_69G2G9A2XTg1pPoQh8
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+    <string name="google_maps_key" translatable="false" templateMergeStrategy="preserve">
+        <!-- Debug Key -->
+        <!-- AIzaSyAJB-awNbJ51-4X2ew1Yl0yRHajZ6NXAJ0-->
+        <!-- Release Key -->
+        AIzaSyAelhR_Um-zK2o6kJOL6G68d5y5b-5b_Wo
+    </string>
+</resources>

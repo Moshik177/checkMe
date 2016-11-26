@@ -1,0 +1,140 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:facebook="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="com.sadna.app.checkme.activities.LoginActivity"
+    android:background="@color/holo_purple_light"
+    android:id="@+id/background_img">
+
+    <!-- Login progress -->
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="@color/holo_pink_light"
+        android:minHeight="?attr/actionBarSize"
+        android:weightSum="1">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_alignParentStart="true">
+        <ImageView
+            android:id = "@+id/logo"
+            android:layout_width="55dp"
+            android:contentDescription="logo_image"
+            android:layout_height="55dp"
+            android:src="@drawable/check_me_logo"
+            android:layout_gravity="left|center"
+            android:layout_marginTop="10dp"
+            tools:ignore="RtlHardcoded"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/toolbarText"
+                android:textColor="@color/holo_purple_dark"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                 android:text="@string/sign_up_toolbar"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:layout_gravity = "right|center"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/logo"
+                tools:ignore="RtlHardcoded" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+
+    <ProgressBar android:id="@+id/login_progress" style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp" android:visibility="gone" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/title_activity_login"
+        android:id="@+id/textView"
+        android:textColor="@color/holo_purple_dark"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:typeface="sans"
+        android:layout_marginTop="45dp" />
+
+    <ScrollView android:id="@+id/login_form" android:layout_width="match_parent"
+        android:layout_height="165dp"
+        android:layout_marginTop="50dp">
+
+        <LinearLayout android:id="@+id/email_login_form" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical">
+
+            <EditText android:id="@+id/username" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:hint="@string/prompt_username"
+                android:maxLines="1"
+                android:inputType="text"
+                android:textColor="@color/holo_purple_new"
+                android:layout_marginRight="65dp"
+                android:layout_marginLeft="65dp" />
+
+            <EditText android:id="@+id/password" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:hint="@string/prompt_password"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:textColor="@color/holo_purple_new"
+                android:gravity="right|center_vertical"
+                android:layout_marginRight="65dp"
+                android:layout_marginLeft="65dp" />
+
+            <Button android:id="@+id/sign_in_button" style="?android:textAppearanceSmall"
+                android:layout_width="match_parent" android:layout_height="30dp"
+                android:layout_marginTop="35dp" android:text="@string/action_sign_in"
+                android:textStyle="bold"
+                android:background="@color/holo_purple_new"
+                android:textColor="@color/holo_white"
+                android:layout_marginLeft="65dp"
+                android:layout_marginRight="65dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:paddingRight="38dp"
+        android:paddingLeft="38dp"
+        android:text="Login with Facebook" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/error_login_fb_error"
+        android:id="@+id/textErrorView"
+        android:layout_gravity="center_horizontal"
+        android:visibility="invisible" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/signUpTextView"
+        android:textColor="@color/holo_purple_dark"
+        android:clickable="true"
+        android:textStyle="bold"
+        android:textSize="@dimen/abc_text_size_subtitle_material_toolbar"
+        android:onClick="moveToSignUpActivity"
+        android:text="@string/sign_up"
+        android:layout_marginTop="20dp" />
+
+</LinearLayout>

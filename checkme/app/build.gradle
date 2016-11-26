@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+    defaultConfig {
+        applicationId "com.sadna.app.checkme"
+        minSdkVersion 19
+        targetSdkVersion 20
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    compileOptions {
+        encoding "UTF-8"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile files('libs/javax.mail.jar')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.google.android.gms:play-services:9.4.0'
+    compile 'com.facebook.android:facebook-android-sdk:4.5.0'
+    compile 'com.google.firebase:firebase-messaging:9.2.1'
+    compile 'com.jcabi:jcabi-aspects:0.22'
+    compile 'org.json:json:20141113'
+    compile 'com.google.maps.android:android-maps-utils:0.3.4'
+    compile 'com.android.support:support-v4:23.4.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha5'
+    testCompile 'junit:junit:4.12'
+}
+apply plugin: 'com.google.gms.google-services'

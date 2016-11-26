@@ -1,0 +1,18 @@
+<resources>
+    <string name="title_activity_login">Check Me</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_username">שם משתמש</string>
+    <string name="prompt_password">סיסמה</string>
+    <string name="action_sign_in">כניסה</string>
+    <string name="action_sign_in_short">Log in</string>
+
+    <string name="error_invalid_username">שם המשתמש שגוי</string>
+    <string name="error_invalid_email">דואל שגוי</string>
+    <string name="error_invalid_password">הסיסמה קצרה מידי</string>
+    <string name="error_incorrect_password">הסיסמא שגויה</string>
+    <string name="error_field_required">השדה נחוץ</string>
+    <string name="error_user_already_exists">שם המשתמש קיים</string>
+    <string name="error_login_fb_error">\nאופס.. שגיאה במהלך ההתחברות</string>
+    <string name="error_verify_wrong_code">\nהקוד אימות שגוי </string>
+</resources>

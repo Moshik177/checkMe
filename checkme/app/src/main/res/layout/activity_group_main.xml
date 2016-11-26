@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sadna.app.checkme.activities.GroupsMainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="@color/holo_pink_light"
+        android:minHeight="?attr/actionBarSize"
+        android:weightSum="1">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_alignParentStart="true">
+            <ImageView
+                android:id = "@+id/logo"
+                android:layout_width="55dp"
+                android:contentDescription="logo_image"
+                android:layout_height="55dp"
+                android:src="@drawable/check_me_logo"
+                android:layout_gravity="left|center"
+                android:layout_marginTop="10dp"
+                tools:ignore="RtlHardcoded"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/toolbarText"
+                android:textColor="@color/holo_purple_dark"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:text="@string/title_activity_login_group"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:layout_gravity = "right|center"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/logo"
+                tools:ignore="RtlHardcoded" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="58dp">
+
+    <!-- place your view here -->
+    <ListView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/groupsListView"
+        android:background="@drawable/wallpaper"
+        android:dividerHeight="0dp"
+        android:divider="@null"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:drawSelectorOnTop="false"
+        android:fastScrollAlwaysVisible="false"
+        android:footerDividersEnabled="true"
+        android:headerDividersEnabled="true"
+        android:scrollingCache="false"
+        android:smoothScrollbar="true"
+        android:stackFromBottom="false"
+        android:textAlignment="textStart"
+        android:textFilterEnabled="true"
+        android:visibility="visible" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <Button
+        style="@style/Base.Widget.AppCompat.Button"
+        android:id="@+id/add_group_button"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:clickable="true"
+        android:text="@string/addGroupButton"
+        android:layout_gravity="right"
+        android:layout_column="0"
+        android:background="@color/holo_purple_new"
+        android:textColor="@color/holo_white"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:onClick="addGroup"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        tools:ignore="SpUsage"
+        android:maxLines="1" />
+
+</RelativeLayout>
+
+

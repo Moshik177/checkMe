@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/createNewGroup"
+    android:background="@color/holo_purple_light"
+    android:weightSum="1">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="@color/holo_pink_light"
+        android:minHeight="?attr/actionBarSize"
+        android:weightSum="1">
+
+        <ImageView
+            android:layout_width="55dp"
+            android:contentDescription="@string/logo_image"
+            android:layout_height="55dp"
+            android:src="@drawable/check_me_logo"
+            android:layout_gravity="left|center"
+            android:layout_weight="0.01"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbarText"
+            android:textColor="@color/holo_purple_dark"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:text="@string/title_activity_login_group"
+            android:layout_marginTop="15dp"
+            android:paddingBottom="10dp" />
+
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <EditText
+        android:id="@+id/newGroupNameTextBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/newGroupNameField"
+        android:maxLines="1"
+        android:textColor="@color/holo_purple_new"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:inputType="text"
+        android:layout_marginTop="55dp" />
+
+    <Button
+        style="@style/Base.Widget.AppCompat.Button"
+        android:id="@+id/doneGroupButton"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_row="28"
+        android:layout_column="0"
+        android:text="@string/next_create_group"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:onClick="attemptGroupCreation"
+        android:clickable="true"
+        android:background="@color/holo_purple_new"
+        android:textColor="@color/holo_white"/>
+</GridLayout>

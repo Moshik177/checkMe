@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context="com.sadna.app.checkme.activities.WelcomeScreenActivity"
+    android:background="@color/holo_purple_light"
+    android:id="@+id/background_img"
+    android:touchscreenBlocksFocus="true">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/check_me"
+        android:ems="10"
+        android:layout_marginTop="192dp"
+        android:id="@+id/logoText"
+        android:textSize="35sp"
+        android:elevation="1dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textStyle="normal|bold"
+        android:layout_marginLeft="130dp"
+        android:gravity="center_vertical|center" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:src="@drawable/check_me_logo"
+        android:layout_below="@+id/logoText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:contentDescription="" />
+</RelativeLayout>

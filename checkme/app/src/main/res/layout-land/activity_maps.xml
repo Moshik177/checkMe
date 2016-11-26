@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:touchscreenBlocksFocus="true">
+
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:id="@+id/map"
+    tools:context="com.sadna.app.checkme.activities.MapsActivity"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_below="@+id/groupNameTitle" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:id="@+id/groupNameTitle"
+        android:background="@color/holo_purple_new"
+        android:textColor="@color/holo_white"
+        android:layout_gravity="left|center"
+        android:gravity="center"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentStart="true" />
+
+    <android.support.v7.widget.Toolbar
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="58dp"
+    android:background="@color/holo_pink_light"
+    android:minHeight="?attr/actionBarSize"
+    android:weightSum="1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+    <ImageView
+        android:layout_width="55dp"
+        android:contentDescription="logo_image"
+        android:layout_height="55dp"
+        android:src="@drawable/check_me_logo"
+        android:layout_gravity="left|center"
+        android:layout_weight="0.01"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbarText"
+        android:textColor="@color/holo_purple_dark"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:text="@string/title_map"
+        android:layout_marginTop="20dp" />
+
+    </android.support.v7.widget.Toolbar>
+
+</RelativeLayout>
